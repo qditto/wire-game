@@ -34,4 +34,12 @@ function init() {
     console.log(stage)
 }
 
+createjs.Ticker.addEventListener("tick", handleTick);
+function handleTick(event) {
+    stage.update();
+    if (!event.paused) {
+        // Actions carried out when the Ticker is not paused.
+    }
+}
+
 
