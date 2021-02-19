@@ -94,7 +94,7 @@ function drawLine(event) {
 function endDraw(event) {
     var target, targets = stage.getObjectsUnderPoint(stage.mouseX, stage.mouseY);
     for (var i = 0; i < targets.length; i++) {
-        if (targets[i].name == startingTarget.name) {
+        if (targets[i].name == startingTarget.name && targets[i].id !== startingTarget.id) {
             target = targets[i];
             break;
         }
